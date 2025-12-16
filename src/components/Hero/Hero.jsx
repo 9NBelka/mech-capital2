@@ -41,7 +41,7 @@ const Hero = ({ scrollToSection }) => {
           <div className={styles.note}>70 заявок (47 Paid + 23 Organic) • Global Demand</div>
         </div>
         <div className={styles.visualContent}>
-          <img src='images/heroImage.jpg' className={styles.backgroundImage} />
+          <img src='images/heroImage.jpg' className={styles.backgroundImage} alt='cyber-cars' />
           <div className={styles.flyBlockWithLine}>
             <div className={styles.flyBlockBlockTexts}>
               <p>Paid Engine</p>
@@ -61,6 +61,12 @@ const Hero = ({ scrollToSection }) => {
               <h5 className={styles.flyBlockTitle}>Organic Leads</h5>
               <p className={styles.flyBlockDescription}>$0 Cost</p>
             </div>
+          </div>
+
+          <div className={styles.blockForLink}>
+            <a href='https://mechorbit.com/' target='_blank'>
+              <h4 className={styles.linkText}>mechorbit.com</h4>
+            </a>
           </div>
         </div>
       </div>

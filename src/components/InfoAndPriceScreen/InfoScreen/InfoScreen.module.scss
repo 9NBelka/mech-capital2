@@ -128,6 +128,22 @@
       box-shadow: 0px 0.2vw 0.4vw 0vw rgb(59 130 246 / 0.2);
     }
 
+    & .iconAndTextBlock {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1vw;
+
+      & .cardTitleMain {
+        width: 73%;
+        font-size: 1vw;
+        color: var(--color-white);
+        font-family: var(--font-Inter);
+        font-weight: var(--font-weight-bold);
+        line-height: var(--font-lineh-normal);
+      }
+    }
+
     & .iconContainer {
       display: flex;
       align-items: center;
@@ -159,22 +175,25 @@
       }
     }
 
-    & .cardTitle {
-      font-size: 1vw;
-      color: var(--color-white);
-      font-family: var(--font-Inter);
-      font-weight: var(--font-weight-bold);
-      line-height: var(--font-lineh-small);
-      margin-top: 1vw;
-    }
+    & .cardTitleAndDescription {
+      & .cardTitle {
+        font-size: 1vw;
+        color: var(--color-white);
+        font-family: var(--font-Inter);
+        font-weight: var(--font-weight-bold);
+        line-height: var(--font-lineh-small);
+        margin-top: 1vw;
+        display: none;
+      }
 
-    & .cardDescription {
-      font-size: 0.75vw;
-      color: var(--color-gray);
-      font-family: var(--font-Inter);
-      font-weight: var(--font-weight-regular);
-      line-height: var(--font-lineh-normal-another);
-      margin-top: 1vw;
+      & .cardDescription {
+        font-size: 0.75vw;
+        color: var(--color-gray);
+        font-family: var(--font-Inter);
+        font-weight: var(--font-weight-regular);
+        line-height: var(--font-lineh-normal-another);
+        margin-top: 1vw;
+      }
     }
   }
 }
@@ -186,6 +205,8 @@
     gap: 3vw;
 
     & .card {
+      flex-direction: row;
+      gap: 2.5vw;
       width: 100%;
       border-radius: 2vw;
       padding: 3vw 3vw;
@@ -194,6 +215,13 @@
         transform: translateY(0vw);
         border: 0.01vw solid rgba(255, 255, 255, 0.05);
         box-shadow: 0px 0vw 0vw 0vw rgb(59 130 246 / 0.2);
+      }
+
+      & .iconAndTextBlock {
+        align-items: start;
+        & .cardTitleMain {
+          display: none;
+        }
       }
 
       & .iconContainer {
@@ -206,14 +234,23 @@
         }
       }
 
-      & .cardTitle {
-        font-size: 2.4vw;
-        margin-top: 2.5vw;
-      }
+      & .cardTitleAndDescription {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
 
-      & .cardDescription {
-        font-size: 1.8vw;
-        margin-top: 1.5vw;
+        & .cardTitle {
+          display: flex;
+          font-size: 2.4vw;
+          // margin-top: 2.5vw;
+          margin-top: 0.3vw;
+        }
+
+        & .cardDescription {
+          font-size: 1.8vw;
+          // margin-top: 1.5vw;
+          margin-top: 1vw;
+        }
       }
     }
   }
@@ -225,6 +262,7 @@
     gap: 5vw;
 
     & .card {
+      gap: 5vw;
       border-radius: 4vw;
       padding: 5vw 5vw;
 
@@ -238,14 +276,20 @@
         }
       }
 
-      & .cardTitle {
-        font-size: 4.6vw;
-        margin-top: 4vw;
-      }
+      & .cardTitleAndDescription {
+        width: 82%;
 
-      & .cardDescription {
-        font-size: 3.6vw;
-        margin-top: 3vw;
+        & .cardTitle {
+          font-size: 4.6vw;
+          // margin-top: 4vw;
+          margin-top: 0.5vw;
+        }
+
+        & .cardDescription {
+          font-size: 3.6vw;
+          // margin-top: 3vw;
+          margin-top: 1.5vw;
+        }
       }
     }
   }

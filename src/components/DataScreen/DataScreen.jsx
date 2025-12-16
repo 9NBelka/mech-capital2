@@ -46,16 +46,21 @@ export default function DataScreen() {
           <div className={styles.blocksWithExperience}>
             {dataTextOnBlocks.map((text, index) => (
               <div key={index} className={clsx(styles.card, styles[text.classForHover])}>
-                <div
-                  className={clsx(
-                    styles.iconContainer,
-                    index === 1 && styles.iconContainerBlue,
-                    index === 2 && styles.iconContainerOrange,
-                  )}>
-                  {text.icon}
+                <div className={styles.iconAndTextBlock}>
+                  <div
+                    className={clsx(
+                      styles.iconContainer,
+                      index === 1 && styles.iconContainerBlue,
+                      index === 2 && styles.iconContainerOrange,
+                    )}>
+                    {text.icon}
+                  </div>
+                  <h4 className={styles.cardTitleMain}>{text.title}</h4>
                 </div>
-                <h4 className={styles.cardTitle}>{text.title}</h4>
-                <p className={styles.cardDescription}>{text.description}</p>
+                <div className={styles.cardTitleAndDescription}>
+                  <h4 className={styles.cardTitle}>{text.title}</h4>
+                  <p className={styles.cardDescription}>{text.description}</p>
+                </div>
               </div>
             ))}
           </div>

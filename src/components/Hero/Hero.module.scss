@@ -572,6 +572,23 @@
       }
     }
   }
+
+  & .blockForLink {
+    position: absolute;
+    right: 10.91vw;
+    bottom: 4.81vw;
+    opacity: 0.1;
+
+    & .linkText {
+      text-decoration: none;
+      font-size: 0.87vw;
+      color: var(--color-for-link-in-hero);
+      font-family: var(--font-Inter);
+      font-weight: var(--font-weight-bold);
+      line-height: var(--font-lineh-normal);
+      letter-spacing: -0.01vw;
+    }
+  }
 }
 
 @media (max-width: 1024px) {

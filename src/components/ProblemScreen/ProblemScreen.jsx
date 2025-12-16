@@ -48,16 +48,21 @@ export default function ProblemScreen() {
           <div className={styles.blocksWithExperience}>
             {problems.map((problem, index) => (
               <div key={index} className={clsx(styles.card, styles[problem.classForHover])}>
-                <div
-                  className={clsx(
-                    styles.iconContainer,
-                    index === 1 && styles.iconContainerPurple,
-                    index === 2 && styles.iconContainerOrange,
-                  )}>
-                  {problem.icon}
+                <div className={styles.iconAndTextBlock}>
+                  <div
+                    className={clsx(
+                      styles.iconContainer,
+                      index === 1 && styles.iconContainerPurple,
+                      index === 2 && styles.iconContainerOrange,
+                    )}>
+                    {problem.icon}
+                  </div>
+                  <h4 className={styles.cardTitleMain}>{problem.title}</h4>
                 </div>
-                <h4 className={styles.cardTitle}>{problem.title}</h4>
-                <p className={styles.cardDescription}>{problem.description}</p>
+                <div className={styles.cardTitleAndDescription}>
+                  <h4 className={styles.cardTitle}>{problem.title}</h4>
+                  <p className={styles.cardDescription}>{problem.description}</p>
+                </div>
               </div>
             ))}
           </div>

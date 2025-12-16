@@ -53,11 +53,19 @@ export default function InfoScreen() {
           <div className={styles.blocksWithExperience}>
             {informations.map((information, index) => (
               <div key={index} className={styles.card}>
-                <div className={styles.iconContainer}>{information.icon}</div>
-                <h4 className={styles.cardTitle}>
-                  {index + 1}. {` `} {information.title}
-                </h4>
-                <p className={styles.cardDescription}>{information.description}</p>
+                <div className={styles.iconAndTextBlock}>
+                  <div className={styles.iconContainer}>{information.icon}</div>
+                  <h4 className={styles.cardTitleMain}>
+                    {index + 1}. {` `}
+                    {information.title}
+                  </h4>
+                </div>
+                <div className={styles.cardTitleAndDescription}>
+                  <h4 className={styles.cardTitle}>
+                    {index + 1}. {` `} {information.title}
+                  </h4>
+                  <p className={styles.cardDescription}>{information.description}</p>
+                </div>
               </div>
             ))}
           </div>
