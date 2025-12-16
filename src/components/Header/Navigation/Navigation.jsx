@@ -13,7 +13,9 @@ export default function Navigation({ handleScroll, tablet }) {
       <a onClick={() => handleScroll('result')} className={styles.navLink}>
         Результати
       </a>
-      <button className={styles.buttonInvest}>Invest Now</button>
+      <button className={styles.buttonInvest} onClick={() => handleScroll('opportunity')}>
+        Invest Now
+      </button>
     </nav>
   );
 }
